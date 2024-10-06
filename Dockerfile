@@ -5,7 +5,5 @@ RUN apt-get update \
   doxygen graphviz git \
   && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/tripal/tripal /data \
-  && mkdir api
-
+COPY ./ /data
 WORKDIR /data
